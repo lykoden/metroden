@@ -64,3 +64,9 @@ img {
     border-radius: var(--border-radius);
     margin: auto;
 }
+
+.discord-id {
+    font-weight: bolder;
+    color: var(--accent);
+    text-shadow: var(--accent) 0px 0px 4px;
+}
