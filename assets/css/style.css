@@ -1,0 +1,129 @@
+/* Import Google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+
+:root {
+    --text: black;
+    --text-lighter: rgba(0, 0, 0, 0.5);
+    --header: rgb(226, 226, 226);
+    --body: rgb(254, 254, 254);
+    --main: rgb(240, 240, 240);
+    --border-radius: 15px;
+    --accent: rgb(0, 176, 111);
+    --shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: rgb(220, 220, 220);
+        --text-lighter: rgba(255, 255, 255, 0.5);
+        --header: rgb(26, 24, 23);
+        --body: rgb(47, 45, 44);
+        --main: rgb(46, 46, 46);
+        --link: rgb(228, 153, 41);
+        --accent: rgb(0, 221, 140);
+        --shadow: rgba(0, 176, 111, 0.384) 3px 3px 5px;
+    }
+}
+
+/* El style */
+
+* {
+    font-family: Roboto, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--text);
+}
+
+body {
+    background-color: var(--body);
+    margin: 0;
+    height: 100%;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    background-color: var(--header);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.subtitle {
+    color: var(--text-lighter);
+    font-size: 1.5em;
+    margin-top: -35px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+nav a {
+    font-size: 1.5em;
+    color: var(--body);
+    background-color: var(--text);
+    text-decoration: none;
+    padding: 10px;
+    height: fit-content;
+    transition: background-color 0.25s;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+}
+
+/* Style pour le plan */
+
+#plan-container {
+    flex: 1;
+    overflow: hidden;
+}
+
+#plan-metroden {
+    flex: 1;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+/* Style pour la page à propos */
+
+#a-propos {
+    padding: 1em 2em;
+}
+
+img {
+    width: 100%;
+    max-width: 90vh;
+    border-radius: var(--border-radius);
+}
+
+.discord-id {
+    font-weight: bolder;
+    color: var(--accent);
+    text-shadow: var(--accent) 0px 0px 4px;
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        padding: 0em 2em 2em;
+        flex-direction: column;
+    }
+
+}

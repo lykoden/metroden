@@ -4,27 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metroden - Lykoden</title>
+    <title>Metroden</title>
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/197493617?s=48&v=4" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/svg-pan-zoom.min.js"></script>
 </head>
 
 <body>
     <main>
-        <h1>Metroden</h1>
-        <p class="subtitle">Services de transport de Lykoden</p>
-        <!-- <h2>Carte du réseau actuel</h2> -->
-        <!-- <img src="/assets/img/plan_metroden" alt="carte du réseau actuel"> -->
-        <h2>Carte du réseau futur</h2>
-        <p>⚠️ Réseau encore en cours de construction ⚠️</p>
-        <a href="./assets/img/proposition_metroden.png">
-            <img src="./assets/img/proposition_metroden.png" alt="carte du réseau futur">
-        </a>
-        <h2>Contact</h2>
-        <p>Pour toute proposition supplémentaire et autre idées liées au réseau, contactez <span
-                class="discord-id">@themimolet</span> sur
-            Discord !</p>
+        <header>
+            <div>
+                <h1>Metroden</h1>
+                <p class="subtitle">Services de transport de Lykoden</p>
+            </div>
+            <nav>
+                <a href="./a-propos">À propos</a>
+            </nav>
+        </header>
+
+        <div id="plan-container">
+            <embed id="plan-metroden" type="image/svg+xml" alt="carte du réseau actuel"
+                src="./assets/img/plan_metroden.svg" />
+        </div>
+
     </main>
 </body>
+
+<script>
+
+    // Variable globale pour panZoomPlan
+    let panZoomPlan;
+
+    document.getElementById('plan-metroden').addEventListener('load', function () {
+        panZoomPlan = svgPanZoom(document.getElementById('plan-metroden'), {
+            controlIconsEnabled: true,
+            contain: true,
+            center: true
+        });
+    });
+
+    // Gérer le redimensionnement de la fenêtre
+    window.addEventListener('resize', function () {
+        if (panZoomPlan) {
+            panZoomPlan.resize();
+            panZoomPlan.updateBBox();
+            panZoomPlan.center();
+        }
+    });
+
+    // Gérer le redimensionnement de la boite
+    const resizeObserver = new ResizeObserver(function () {
+        if (panZoomPlan) {
+            panZoomPlan.resize();
+            panZoomPlan.updateBBox();
+            panZoomPlan.center();
+        }
+    });
+
+    resizeObserver.observe(document.getElementById('plan-container'));
+</script>
 
 </html>
