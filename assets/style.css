@@ -1,0 +1,66 @@
+/* Import Google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+
+:root {
+    --text: black;
+    --text-lighter: rgba(0, 0, 0, 0.5);
+    --body: rgb(221, 218, 216);
+    --main: rgb(240, 240, 240);
+    --border-radius: 15px;
+    --accent: rgb(0, 176, 111);
+    --shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: rgb(220, 220, 220);
+        --text-lighter: rgba(255, 255, 255, 0.5);
+        --body: rgb(26, 24, 23);
+        --main: rgb(46, 46, 46);
+        --link: rgb(228, 153, 41);
+        --accent: rgb(0, 221, 140);
+        --shadow: rgba(0, 176, 111, 0.384) 3px 3px 5px;
+    }
+}
+
+/* El style */
+
+* {
+    font-family: Roboto, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--text);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.subtitle {
+    color: var(--text-lighter);
+    font-size: 1.5em;
+    margin-top: -35px;
+}
+
+body {
+    background-color: var(--body);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: var(--main);
+    border-radius: var(--border-radius);
+    margin: 2em;
+    padding: 2em;
+    box-shadow: var(--shadow);
+}
+
+img {
+    width: 100%;
+    max-width: 90vh;
+    border-radius: var(--border-radius);
+    margin: auto;
+}
