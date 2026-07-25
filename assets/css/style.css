@@ -69,8 +69,10 @@ h1 {
 
 nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
     align-self: center;
+    gap: 10px;
 }
 
 nav a {
@@ -81,6 +83,7 @@ nav a {
     padding: 10px;
     height: fit-content;
     transition: background-color 0.25s;
+    text-align: center;
 }
 
 nav a:hover {
@@ -114,7 +117,7 @@ img {
     border-radius: var(--border-radius);
 }
 
-.discord-id {
+.accent {
     font-weight: bolder;
     color: var(--accent);
     text-shadow: var(--accent) 0px 0px 4px;
