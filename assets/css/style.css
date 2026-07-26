@@ -11,7 +11,7 @@
     --body: rgb(254, 254, 254);
     --main: rgb(240, 240, 240);
     --border-radius: 15px;
-    --accent: rgb(0, 176, 111);
+    --accent: rgb(0, 188, 119);
     --shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
 }
 
@@ -120,7 +120,6 @@ img {
 .accent {
     font-weight: bolder;
     color: var(--accent);
-    text-shadow: var(--accent) 0px 0px 4px;
 }
 
 @media screen and (max-width: 500px) {
