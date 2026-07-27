@@ -122,6 +122,22 @@ img {
     color: var(--accent);
 }
 
+.rouge {
+    font-weight: bolder;
+    color: rgb(214, 0, 0);
+}
+
+.verte {
+    font-weight: bolder;
+    color: rgb(0, 158, 0);
+}
+
+.bleue {
+    font-weight: bolder;
+    color: rgb(0, 148, 223);
+}
+
+
 @media screen and (max-width: 500px) {
     header {
         padding: 0em 2em 2em;
