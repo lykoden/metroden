@@ -122,21 +122,33 @@ img {
     color: var(--accent);
 }
 
-.rouge {
+.rouge,
+.verte,
+.bleue,
+.orange,
+.magenta {
     font-weight: bolder;
+}
+
+.rouge {
     color: rgb(214, 0, 0);
 }
 
 .verte {
-    font-weight: bolder;
     color: rgb(0, 158, 0);
 }
 
 .bleue {
-    font-weight: bolder;
     color: rgb(0, 148, 223);
 }
 
+.orange {
+    color: rgb(255, 165, 0);
+}
+
+.magenta {
+    color: rgb(255, 0, 255);
+}
 
 @media screen and (max-width: 500px) {
     header {
