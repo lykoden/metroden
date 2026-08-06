@@ -1,5 +1,7 @@
 # Metroden
 
+[![Deploy static content to Pages](https://github.com/lykoden/metroden/actions/workflows/static.yml/badge.svg)](https://github.com/lykoden/metroden/actions/workflows/static.yml)
+
 Site HTML simple qui sert de carte du réseau de métro de Lykoden, notre serveur Minecraft.
 
 ![image de metroden](./infos/img/2026-08-06_10.15.10.png)
